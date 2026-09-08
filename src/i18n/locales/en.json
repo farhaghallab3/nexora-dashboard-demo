@@ -48,6 +48,10 @@
     "search": "Search...",
     "welcomeBack": "Welcome back"
   },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Mark all as read"
+  },
   "dashboard": {
     "title": "Dashboard",
     "subtitle": "Here's what's happening with your business today.",

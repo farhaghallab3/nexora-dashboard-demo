@@ -110,3 +110,46 @@ export const channelBreakdown = [
   { channel: 'online', value: 21 },
   { channel: 'partner', value: 10 },
 ]
+
+export const notifications = [
+  {
+    id: 1,
+    type: 'order',
+    title: { en: 'New order received', ar: 'تم استلام طلب جديد' },
+    message: { en: 'Falcon Ridge Group placed an order worth $8,340.', ar: 'قامت مجموعة فالكون ريدج بطلب بقيمة 8,340$.' },
+    time: { en: '10 minutes ago', ar: 'قبل 10 دقائق' },
+    read: false,
+  },
+  {
+    id: 2,
+    type: 'customer',
+    title: { en: 'New customer signed up', ar: 'انضم عميل جديد' },
+    message: { en: 'Grace Okafor just created an account.', ar: 'أنشأت غريس أوكافور حسابًا للتو.' },
+    time: { en: '1 hour ago', ar: 'قبل ساعة' },
+    read: false,
+  },
+  {
+    id: 3,
+    type: 'payment',
+    title: { en: 'Payment received', ar: 'تم استلام دفعة' },
+    message: { en: 'Horizon Consulting Group paid $4,250.', ar: 'دفعت مجموعة هورايزن للاستشارات مبلغ 4,250$.' },
+    time: { en: '3 hours ago', ar: 'قبل 3 ساعات' },
+    read: true,
+  },
+  {
+    id: 4,
+    type: 'report',
+    title: { en: 'Weekly report ready', ar: 'التقرير الأسبوعي جاهز' },
+    message: { en: 'Your performance report for last week is ready to view.', ar: 'تقرير أدائك للأسبوع الماضي جاهز للعرض.' },
+    time: { en: 'Yesterday', ar: 'أمس' },
+    read: true,
+  },
+  {
+    id: 5,
+    type: 'alert',
+    title: { en: 'Customer flagged inactive', ar: 'تم تصنيف عميل كغير نشط' },
+    message: { en: 'Karim Bishara has had no activity for 90 days.', ar: 'لم يسجل كريم بشارة أي نشاط منذ 90 يومًا.' },
+    time: { en: '2 days ago', ar: 'قبل يومين' },
+    read: true,
+  },
+]

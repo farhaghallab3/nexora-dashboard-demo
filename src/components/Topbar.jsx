@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
-import { Menu, Search, Bell } from 'lucide-react'
+import { Menu, Search } from 'lucide-react'
 import LanguageToggle from './LanguageToggle'
+import NotificationsDropdown from './NotificationsDropdown'
 import { currentUser } from '../data/mockData'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -30,10 +31,7 @@ export default function Topbar({ onMenuClick }) {
       <div className="flex flex-1 items-center justify-end gap-2 sm:gap-3">
         <LanguageToggle variant="compact" />
 
-        <button className="relative rounded-lg p-2 text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800" aria-label="Notifications">
-          <Bell className="h-5 w-5" />
-          <span className="absolute end-1.5 top-1.5 h-2 w-2 rounded-full bg-rose-500 ring-2 ring-white dark:ring-slate-900" />
-        </button>
+        <NotificationsDropdown />
 
         <div className="flex items-center gap-2.5 border-s border-slate-200 ps-3 dark:border-slate-800">
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent-600 text-sm font-semibold text-white">

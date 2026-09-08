@@ -48,6 +48,10 @@
     "search": "بحث...",
     "welcomeBack": "أهلاً بعودتك"
   },
+  "notifications": {
+    "title": "الإشعارات",
+    "markAllRead": "تعليم الكل كمقروء"
+  },
   "dashboard": {
     "title": "لوحة التحكم",
     "subtitle": "إليك آخر مستجدات أعمالك اليوم.",
