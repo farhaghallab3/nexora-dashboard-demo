@@ -1,0 +1,99 @@
+{
+  "app": {
+    "name": "Nexora",
+    "tagline": "Run your business, simplified."
+  },
+  "login": {
+    "welcome": "Welcome back",
+    "subtitle": "Sign in to access your dashboard",
+    "email": "Email address",
+    "emailPlaceholder": "you@company.com",
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign in",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "demoNotice": "This is a demo — click Sign in to continue, no credentials required."
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "customers": "Customers",
+    "reports": "Reports",
+    "settings": "Settings",
+    "logout": "Log out"
+  },
+  "topbar": {
+    "search": "Search...",
+    "welcomeBack": "Welcome back"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Here's what's happening with your business today.",
+    "stats": {
+      "revenue": "Total Revenue",
+      "customers": "Active Customers",
+      "pending": "Pending Orders",
+      "growth": "Growth",
+      "vsLastMonth": "vs last month"
+    },
+    "chart": {
+      "title": "Revenue Overview",
+      "subtitle": "Monthly performance for the last 6 months",
+      "revenue": "Revenue",
+      "target": "Target"
+    },
+    "table": {
+      "title": "Recent Orders",
+      "subtitle": "A list of recent orders from your customers",
+      "searchPlaceholder": "Search by name...",
+      "filterAll": "All statuses",
+      "columns": {
+        "name": "Customer",
+        "status": "Status",
+        "date": "Date",
+        "amount": "Amount"
+      },
+      "noResults": "No records match your search.",
+      "showing": "Showing {{count}} of {{total}} records"
+    }
+  },
+  "status": {
+    "active": "Active",
+    "pending": "Pending",
+    "completed": "Completed"
+  },
+  "comingSoon": {
+    "title": "Coming Soon",
+    "subtitle": "This page is under construction. Check back soon for updates.",
+    "back": "Back to Dashboard"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your account and preferences.",
+    "profile": "Profile Information",
+    "profileSubtitle": "Update your personal details here.",
+    "fullName": "Full name",
+    "email": "Email address",
+    "role": "Role",
+    "company": "Company",
+    "preferences": "Preferences",
+    "preferencesSubtitle": "Customize your experience.",
+    "language": "Language",
+    "emailNotifications": "Email notifications",
+    "emailNotificationsDesc": "Receive email updates about your account activity.",
+    "darkMode": "Dark mode",
+    "darkModeDesc": "Switch to a darker color scheme (coming soon).",
+    "save": "Save changes",
+    "saveSuccess": "Settings saved successfully"
+  },
+  "months": {
+    "0": "Apr",
+    "1": "May",
+    "2": "Jun",
+    "3": "Jul",
+    "4": "Aug",
+    "5": "Sep"
+  }
+}
