@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Hexagon, Mail, Lock, Info } from 'lucide-react'
+import { Hexagon, Mail, Lock, User, Building2, Info } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 import LanguageToggle from '../components/LanguageToggle'
 
-export default function Login() {
+export default function Signup() {
   const { t } = useTranslation()
   const { login } = useAuth()
   const navigate = useNavigate()
+  const [fullName, setFullName] = useState('')
+  const [company, setCompany] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -36,66 +38,93 @@ export default function Login() {
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">{t('login.welcome')}</h2>
-          <p className="text-sm text-slate-500 mt-1 mb-6 dark:text-slate-400">{t('login.subtitle')}</p>
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">{t('signup.welcome')}</h2>
+          <p className="text-sm text-slate-500 mt-1 mb-6 dark:text-slate-400">{t('signup.subtitle')}</p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">{t('login.email')}</label>
+              <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">{t('signup.fullName')}</label>
+              <div className="relative">
+                <User className="absolute start-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                <input
+                  type="text"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  placeholder={t('signup.fullNamePlaceholder')}
+                  className="w-full rounded-lg border border-slate-200 bg-slate-50 py-2.5 ps-9 pe-3 text-sm text-slate-700 placeholder:text-slate-400 outline-none transition-colors focus:border-accent-400 focus:bg-white focus:ring-2 focus:ring-accent-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:focus:border-accent-500 dark:focus:bg-slate-800 dark:focus:ring-accent-500/20"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">{t('signup.company')}</label>
+              <div className="relative">
+                <Building2 className="absolute start-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                <input
+                  type="text"
+                  value={company}
+                  onChange={(e) => setCompany(e.target.value)}
+                  placeholder={t('signup.companyPlaceholder')}
+                  className="w-full rounded-lg border border-slate-200 bg-slate-50 py-2.5 ps-9 pe-3 text-sm text-slate-700 placeholder:text-slate-400 outline-none transition-colors focus:border-accent-400 focus:bg-white focus:ring-2 focus:ring-accent-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:focus:border-accent-500 dark:focus:bg-slate-800 dark:focus:ring-accent-500/20"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">{t('signup.email')}</label>
               <div className="relative">
                 <Mail className="absolute start-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder={t('login.emailPlaceholder')}
+                  placeholder={t('signup.emailPlaceholder')}
                   className="w-full rounded-lg border border-slate-200 bg-slate-50 py-2.5 ps-9 pe-3 text-sm text-slate-700 placeholder:text-slate-400 outline-none transition-colors focus:border-accent-400 focus:bg-white focus:ring-2 focus:ring-accent-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:focus:border-accent-500 dark:focus:bg-slate-800 dark:focus:ring-accent-500/20"
                 />
               </div>
             </div>
 
             <div>
-              <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">{t('login.password')}</label>
+              <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">{t('signup.password')}</label>
               <div className="relative">
                 <Lock className="absolute start-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                 <input
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder={t('login.passwordPlaceholder')}
+                  placeholder={t('signup.passwordPlaceholder')}
                   className="w-full rounded-lg border border-slate-200 bg-slate-50 py-2.5 ps-9 pe-3 text-sm text-slate-700 placeholder:text-slate-400 outline-none transition-colors focus:border-accent-400 focus:bg-white focus:ring-2 focus:ring-accent-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:focus:border-accent-500 dark:focus:bg-slate-800 dark:focus:ring-accent-500/20"
                 />
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-sm">
-              <label className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
-                <input type="checkbox" className="h-4 w-4 rounded border-slate-300 text-accent-600 focus:ring-accent-400 dark:border-slate-600 dark:bg-slate-800" />
-                {t('login.rememberMe')}
-              </label>
-              <button type="button" className="font-medium text-accent-600 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300">
-                {t('login.forgotPassword')}
-              </button>
-            </div>
+            <label className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+              <input
+                type="checkbox"
+                required
+                className="mt-0.5 h-4 w-4 rounded border-slate-300 text-accent-600 focus:ring-accent-400 dark:border-slate-600 dark:bg-slate-800"
+              />
+              {t('signup.agreeTerms')}
+            </label>
 
             <button
               type="submit"
               className="w-full rounded-lg bg-accent-600 py-2.5 text-sm font-semibold text-white shadow-sm shadow-accent-600/20 transition-colors hover:bg-accent-700 active:bg-accent-800"
             >
-              {t('login.signIn')}
+              {t('signup.createAccount')}
             </button>
           </form>
 
           <div className="mt-5 flex items-start gap-2 rounded-lg bg-accent-50 p-3 text-xs text-accent-700 dark:bg-accent-900/30 dark:text-accent-400">
             <Info className="h-4 w-4 shrink-0 mt-0.5" />
-            <p>{t('login.demoNotice')}</p>
+            <p>{t('signup.demoNotice')}</p>
           </div>
         </div>
 
         <p className="mt-6 text-center text-sm text-slate-500 dark:text-slate-400">
-          {t('login.noAccount')}{' '}
-          <Link to="/signup" className="font-medium text-accent-600 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300">
-            {t('login.signUp')}
+          {t('signup.haveAccount')}{' '}
+          <Link to="/" className="font-medium text-accent-600 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300">
+            {t('signup.signIn')}
           </Link>
         </p>
       </div>

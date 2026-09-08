@@ -3,6 +3,9 @@
     "name": "Nexora",
     "tagline": "Run your business, simplified."
   },
+  "common": {
+    "vsLastMonth": "vs last month"
+  },
   "login": {
     "welcome": "Welcome back",
     "subtitle": "Sign in to access your dashboard",
@@ -16,6 +19,23 @@
     "noAccount": "Don't have an account?",
     "signUp": "Sign up",
     "demoNotice": "This is a demo — click Sign in to continue, no credentials required."
+  },
+  "signup": {
+    "welcome": "Create your account",
+    "subtitle": "Start your free trial, no credit card required",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "Jordan Reyes",
+    "company": "Company",
+    "companyPlaceholder": "Your company name",
+    "email": "Email address",
+    "emailPlaceholder": "you@company.com",
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+    "agreeTerms": "I agree to the Terms of Service and Privacy Policy",
+    "createAccount": "Create account",
+    "haveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "demoNotice": "This is a demo — click Create account to continue, no real data is stored."
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -35,8 +55,7 @@
       "revenue": "Total Revenue",
       "customers": "Active Customers",
       "pending": "Pending Orders",
-      "growth": "Growth",
-      "vsLastMonth": "vs last month"
+      "growth": "Growth"
     },
     "chart": {
       "title": "Revenue Overview",
@@ -59,15 +78,62 @@
       "showing": "Showing {{count}} of {{total}} records"
     }
   },
+  "customers": {
+    "title": "Customers",
+    "subtitle": "Manage and track everyone who does business with you.",
+    "stats": {
+      "totalCustomers": "Total Customers",
+      "newThisMonth": "New This Month",
+      "activeRate": "Active Rate",
+      "lifetimeValue": "Avg. Lifetime Value"
+    },
+    "table": {
+      "title": "All Customers",
+      "subtitle": "A complete list of your customer accounts",
+      "searchPlaceholder": "Search by name or email...",
+      "filterAll": "All statuses",
+      "columns": {
+        "name": "Customer",
+        "status": "Status",
+        "joined": "Joined",
+        "orders": "Orders",
+        "totalSpent": "Total Spent"
+      },
+      "noResults": "No customers match your search.",
+      "showing": "Showing {{count}} of {{total}} customers"
+    }
+  },
+  "reports": {
+    "title": "Reports",
+    "subtitle": "Track performance trends across your business.",
+    "stats": {
+      "avgOrderValue": "Avg. Order Value",
+      "repeatRate": "Repeat Customer Rate",
+      "totalOrders": "Total Orders",
+      "satisfaction": "Customer Satisfaction"
+    },
+    "charts": {
+      "ordersByStatus": {
+        "title": "Orders by Status",
+        "subtitle": "Breakdown of recent orders by current status"
+      },
+      "channelBreakdown": {
+        "title": "Revenue by Channel",
+        "subtitle": "Share of revenue by acquisition channel"
+      }
+    },
+    "channels": {
+      "direct": "Direct",
+      "referral": "Referral",
+      "online": "Online Ads",
+      "partner": "Partner"
+    }
+  },
   "status": {
     "active": "Active",
     "pending": "Pending",
-    "completed": "Completed"
-  },
-  "comingSoon": {
-    "title": "Coming Soon",
-    "subtitle": "This page is under construction. Check back soon for updates.",
-    "back": "Back to Dashboard"
+    "completed": "Completed",
+    "inactive": "Inactive"
   },
   "settings": {
     "title": "Settings",

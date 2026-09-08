@@ -3,6 +3,9 @@
     "name": "نيكسورا",
     "tagline": "أدر أعمالك بكل بساطة."
   },
+  "common": {
+    "vsLastMonth": "مقارنة بالشهر الماضي"
+  },
   "login": {
     "welcome": "مرحبًا بعودتك",
     "subtitle": "سجّل الدخول للوصول إلى لوحة التحكم",
@@ -16,6 +19,23 @@
     "noAccount": "ليس لديك حساب؟",
     "signUp": "إنشاء حساب",
     "demoNotice": "هذا عرض تجريبي — اضغط على تسجيل الدخول للمتابعة، لا حاجة لبيانات اعتماد حقيقية."
+  },
+  "signup": {
+    "welcome": "أنشئ حسابك",
+    "subtitle": "ابدأ نسختك التجريبية المجانية، دون الحاجة لبطاقة ائتمان",
+    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "جوردان رييس",
+    "company": "الشركة",
+    "companyPlaceholder": "اسم شركتك",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "you@company.com",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "••••••••",
+    "agreeTerms": "أوافق على شروط الخدمة وسياسة الخصوصية",
+    "createAccount": "إنشاء حساب",
+    "haveAccount": "هل لديك حساب بالفعل؟",
+    "signIn": "تسجيل الدخول",
+    "demoNotice": "هذا عرض تجريبي — اضغط على إنشاء حساب للمتابعة، لا يتم تخزين أي بيانات حقيقية."
   },
   "nav": {
     "dashboard": "لوحة التحكم",
@@ -35,8 +55,7 @@
       "revenue": "إجمالي الإيرادات",
       "customers": "العملاء النشطون",
       "pending": "الطلبات المعلّقة",
-      "growth": "معدل النمو",
-      "vsLastMonth": "مقارنة بالشهر الماضي"
+      "growth": "معدل النمو"
     },
     "chart": {
       "title": "نظرة عامة على الإيرادات",
@@ -59,15 +78,62 @@
       "showing": "عرض {{count}} من {{total}} سجل"
     }
   },
+  "customers": {
+    "title": "العملاء",
+    "subtitle": "إدارة ومتابعة كل من يتعامل مع شركتك.",
+    "stats": {
+      "totalCustomers": "إجمالي العملاء",
+      "newThisMonth": "عملاء جدد هذا الشهر",
+      "activeRate": "نسبة النشاط",
+      "lifetimeValue": "متوسط القيمة الدائمة"
+    },
+    "table": {
+      "title": "جميع العملاء",
+      "subtitle": "قائمة كاملة بحسابات عملائك",
+      "searchPlaceholder": "ابحث بالاسم أو البريد الإلكتروني...",
+      "filterAll": "جميع الحالات",
+      "columns": {
+        "name": "العميل",
+        "status": "الحالة",
+        "joined": "تاريخ الانضمام",
+        "orders": "الطلبات",
+        "totalSpent": "إجمالي الإنفاق"
+      },
+      "noResults": "لا يوجد عملاء مطابقون لبحثك.",
+      "showing": "عرض {{count}} من {{total}} عميل"
+    }
+  },
+  "reports": {
+    "title": "التقارير",
+    "subtitle": "تتبّع مؤشرات الأداء عبر أعمالك.",
+    "stats": {
+      "avgOrderValue": "متوسط قيمة الطلب",
+      "repeatRate": "نسبة تكرار الشراء",
+      "totalOrders": "إجمالي الطلبات",
+      "satisfaction": "رضا العملاء"
+    },
+    "charts": {
+      "ordersByStatus": {
+        "title": "الطلبات حسب الحالة",
+        "subtitle": "توزيع الطلبات الأخيرة حسب حالتها الحالية"
+      },
+      "channelBreakdown": {
+        "title": "الإيرادات حسب القناة",
+        "subtitle": "نسبة الإيرادات حسب قناة الاكتساب"
+      }
+    },
+    "channels": {
+      "direct": "مباشر",
+      "referral": "الإحالة",
+      "online": "إعلانات إلكترونية",
+      "partner": "الشركاء"
+    }
+  },
   "status": {
     "active": "نشط",
     "pending": "معلّق",
-    "completed": "مكتمل"
-  },
-  "comingSoon": {
-    "title": "قريبًا",
-    "subtitle": "هذه الصفحة قيد الإنشاء. تابعنا للحصول على التحديثات قريبًا.",
-    "back": "العودة إلى لوحة التحكم"
+    "completed": "مكتمل",
+    "inactive": "غير نشط"
   },
   "settings": {
     "title": "الإعدادات",

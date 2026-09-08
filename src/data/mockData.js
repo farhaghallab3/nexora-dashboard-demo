@@ -61,3 +61,52 @@ export const currentUser = {
   role: { en: 'Operations Manager', ar: 'مديرة العمليات' },
   company: { en: 'Nexora Demo Workspace', ar: 'مساحة عمل نيكسورا التجريبية' },
 }
+
+export function getOrdersByStatus() {
+  const counts = { active: 0, pending: 0, completed: 0 }
+  orders.forEach((o) => { counts[o.status] += 1 })
+  return Object.entries(counts).map(([status, count]) => ({ status, count }))
+}
+
+export const customerStats = [
+  { key: 'totalCustomers', value: '1,284', delta: '+5.2%', trend: 'up' },
+  { key: 'newThisMonth', value: '86', delta: '+14.7%', trend: 'up' },
+  { key: 'activeRate', value: '92.3%', delta: '+1.4%', trend: 'up' },
+  { key: 'lifetimeValue', value: '$1,940', delta: '-2.1%', trend: 'down' },
+]
+
+// name: { en, ar } — fictional individuals, industry-agnostic
+export const customers = [
+  { id: 1, name: { en: 'Layla Haddad', ar: 'ليلى حداد' }, email: 'layla.haddad@example.com', status: 'active', joinedDate: '2025-11-02', totalSpent: 8420, orders: 14 },
+  { id: 2, name: { en: 'Omar Nasser', ar: 'عمر ناصر' }, email: 'omar.nasser@example.com', status: 'active', joinedDate: '2025-09-18', totalSpent: 5230, orders: 9 },
+  { id: 3, name: { en: 'Grace Okafor', ar: 'غريس أوكافور' }, email: 'grace.okafor@example.com', status: 'pending', joinedDate: '2026-08-30', totalSpent: 0, orders: 0 },
+  { id: 4, name: { en: 'Yousef Al-Rashid', ar: 'يوسف الرشيد' }, email: 'yousef.alrashid@example.com', status: 'active', joinedDate: '2025-06-11', totalSpent: 12980, orders: 22 },
+  { id: 5, name: { en: 'Mia Andersen', ar: 'ميا أندرسن' }, email: 'mia.andersen@example.com', status: 'inactive', joinedDate: '2024-12-04', totalSpent: 1340, orders: 3 },
+  { id: 6, name: { en: 'Rania Saab', ar: 'رانيا صعب' }, email: 'rania.saab@example.com', status: 'active', joinedDate: '2025-10-22', totalSpent: 6740, orders: 11 },
+  { id: 7, name: { en: 'Daniel Kim', ar: 'دانيال كيم' }, email: 'daniel.kim@example.com', status: 'active', joinedDate: '2025-04-15', totalSpent: 9310, orders: 16 },
+  { id: 8, name: { en: 'Hana Mansour', ar: 'هنا منصور' }, email: 'hana.mansour@example.com', status: 'pending', joinedDate: '2026-08-27', totalSpent: 0, orders: 0 },
+  { id: 9, name: { en: 'Lucas Ferreira', ar: 'لوكاس فيريرا' }, email: 'lucas.ferreira@example.com', status: 'inactive', joinedDate: '2024-08-19', totalSpent: 2150, orders: 5 },
+  { id: 10, name: { en: 'Noor Fawzi', ar: 'نور فوزي' }, email: 'noor.fawzi@example.com', status: 'active', joinedDate: '2025-07-03', totalSpent: 4890, orders: 8 },
+  { id: 11, name: { en: 'Ethan Brooks', ar: 'إيثان بروكس' }, email: 'ethan.brooks@example.com', status: 'active', joinedDate: '2025-02-27', totalSpent: 15620, orders: 27 },
+  { id: 12, name: { en: 'Salma Idris', ar: 'سلمى إدريس' }, email: 'salma.idris@example.com', status: 'active', joinedDate: '2025-12-09', totalSpent: 3480, orders: 6 },
+  { id: 13, name: { en: 'Marco Rossi', ar: 'ماركو روسي' }, email: 'marco.rossi@example.com', status: 'pending', joinedDate: '2026-08-24', totalSpent: 0, orders: 0 },
+  { id: 14, name: { en: 'Amina Toure', ar: 'أمينة توري' }, email: 'amina.toure@example.com', status: 'active', joinedDate: '2025-05-30', totalSpent: 7260, orders: 12 },
+  { id: 15, name: { en: 'Karim Bishara', ar: 'كريم بشارة' }, email: 'karim.bishara@example.com', status: 'inactive', joinedDate: '2024-10-14', totalSpent: 980, orders: 2 },
+  { id: 16, name: { en: 'Sophia Lindqvist', ar: 'صوفيا ليندكفيست' }, email: 'sophia.lindqvist@example.com', status: 'active', joinedDate: '2025-03-08', totalSpent: 10740, orders: 19 },
+  { id: 17, name: { en: 'Tariq Ghannam', ar: 'طارق غنام' }, email: 'tariq.ghannam@example.com', status: 'active', joinedDate: '2025-08-16', totalSpent: 5980, orders: 10 },
+  { id: 18, name: { en: 'Elena Popescu', ar: 'إيلينا بوبيسكو' }, email: 'elena.popescu@example.com', status: 'pending', joinedDate: '2026-08-19', totalSpent: 0, orders: 0 },
+]
+
+export const reportStats = [
+  { key: 'avgOrderValue', value: '$412', delta: '+6.8%', trend: 'up' },
+  { key: 'repeatRate', value: '64.1%', delta: '+3.5%', trend: 'up' },
+  { key: 'totalOrders', value: '2,930', delta: '+9.2%', trend: 'up' },
+  { key: 'satisfaction', value: '4.7 / 5', delta: '-0.1', trend: 'down' },
+]
+
+export const channelBreakdown = [
+  { channel: 'direct', value: 42 },
+  { channel: 'referral', value: 27 },
+  { channel: 'online', value: 21 },
+  { channel: 'partner', value: 10 },
+]

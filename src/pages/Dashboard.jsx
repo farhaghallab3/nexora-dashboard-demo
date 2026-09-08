@@ -1,8 +1,16 @@
 import { useTranslation } from 'react-i18next'
+import { DollarSign, Users, Clock, TrendingUp } from 'lucide-react'
 import StatCard from '../components/StatCard'
 import RevenueChart from '../components/RevenueChart'
 import DataTable from '../components/DataTable'
 import { statCards } from '../data/mockData'
+
+const ICONS = {
+  revenue: DollarSign,
+  customers: Users,
+  pending: Clock,
+  growth: TrendingUp,
+}
 
 export default function Dashboard() {
   const { t } = useTranslation()
@@ -16,7 +24,14 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {statCards.map((card) => (
-          <StatCard key={card.key} card={card} />
+          <StatCard
+            key={card.key}
+            label={t(`dashboard.stats.${card.key}`)}
+            value={card.value}
+            delta={card.delta}
+            trend={card.trend}
+            icon={ICONS[card.key]}
+          />
         ))}
       </div>
 
