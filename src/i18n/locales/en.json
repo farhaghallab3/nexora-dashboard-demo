@@ -84,7 +84,7 @@
     "emailNotifications": "Email notifications",
     "emailNotificationsDesc": "Receive email updates about your account activity.",
     "darkMode": "Dark mode",
-    "darkModeDesc": "Switch to a darker color scheme (coming soon).",
+    "darkModeDesc": "Switch to a darker color scheme.",
     "save": "Save changes",
     "saveSuccess": "Settings saved successfully"
   },

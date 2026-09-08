@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-arabic: 'Cairo', 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -24,6 +26,11 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   background-color: #f8fafc;
+  transition: background-color 0.2s ease-out;
+}
+
+html.dark body {
+  background-color: #020617;
 }
 
 html[dir="rtl"] body {
@@ -43,6 +50,14 @@ html[dir="rtl"] body {
 *::-webkit-scrollbar-thumb {
   background-color: #cbd5e1;
   border-radius: 9999px;
+}
+
+html.dark *::-webkit-scrollbar-thumb {
+  background-color: #334155;
+}
+
+html.dark * {
+  scrollbar-color: #334155 transparent;
 }
 
 @keyframes toast-in {

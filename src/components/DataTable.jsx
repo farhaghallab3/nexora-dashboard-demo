@@ -70,11 +70,11 @@ export default function DataTable() {
   ]
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="flex flex-col gap-4 border-b border-slate-100 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+    <div className="rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+      <div className="flex flex-col gap-4 border-b border-slate-100 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6 dark:border-slate-800">
         <div>
-          <h3 className="text-base font-semibold text-slate-900">{t('dashboard.table.title')}</h3>
-          <p className="text-sm text-slate-500 mt-0.5">{t('dashboard.table.subtitle')}</p>
+          <h3 className="text-base font-semibold text-slate-900 dark:text-white">{t('dashboard.table.title')}</h3>
+          <p className="text-sm text-slate-500 mt-0.5 dark:text-slate-400">{t('dashboard.table.subtitle')}</p>
         </div>
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
           <div className="relative">
@@ -84,13 +84,13 @@ export default function DataTable() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={t('dashboard.table.searchPlaceholder')}
-              className="w-full sm:w-56 rounded-lg border border-slate-200 bg-slate-50 py-2 ps-9 pe-3 text-sm text-slate-700 placeholder:text-slate-400 outline-none transition-colors focus:border-accent-400 focus:bg-white focus:ring-2 focus:ring-accent-100"
+              className="w-full sm:w-56 rounded-lg border border-slate-200 bg-slate-50 py-2 ps-9 pe-3 text-sm text-slate-700 placeholder:text-slate-400 outline-none transition-colors focus:border-accent-400 focus:bg-white focus:ring-2 focus:ring-accent-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:focus:border-accent-500 dark:focus:bg-slate-800 dark:focus:ring-accent-500/20"
             />
           </div>
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="rounded-lg border border-slate-200 bg-slate-50 py-2 px-3 text-sm text-slate-700 outline-none transition-colors focus:border-accent-400 focus:bg-white focus:ring-2 focus:ring-accent-100"
+            className="rounded-lg border border-slate-200 bg-slate-50 py-2 px-3 text-sm text-slate-700 outline-none transition-colors focus:border-accent-400 focus:bg-white focus:ring-2 focus:ring-accent-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:focus:border-accent-500 dark:focus:bg-slate-800 dark:focus:ring-accent-500/20"
           >
             {STATUS_FILTERS.map((s) => (
               <option key={s} value={s}>
@@ -104,12 +104,12 @@ export default function DataTable() {
       <div className="overflow-x-auto">
         <table className="w-full text-start">
           <thead>
-            <tr className="border-b border-slate-100 text-xs uppercase tracking-wide text-slate-400">
+            <tr className="border-b border-slate-100 text-xs uppercase tracking-wide text-slate-400 dark:border-slate-800">
               {columns.map((col) => (
                 <th key={col.key} className="px-5 py-3 sm:px-6 font-medium">
                   <button
                     onClick={() => toggleSort(col.key)}
-                    className="flex items-center gap-1.5 hover:text-slate-600 transition-colors"
+                    className="flex items-center gap-1.5 hover:text-slate-600 transition-colors dark:hover:text-slate-300"
                   >
                     {col.label}
                     <SortIcon column={col.key} />
@@ -122,23 +122,23 @@ export default function DataTable() {
             {filtered.map((row) => (
               <tr
                 key={row.id}
-                className="border-b border-slate-50 last:border-0 transition-colors hover:bg-slate-50"
+                className="border-b border-slate-50 last:border-0 transition-colors hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800/60"
               >
                 <td className="px-5 py-3.5 sm:px-6">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-100 text-xs font-semibold text-accent-700">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-100 text-xs font-semibold text-accent-700 dark:bg-accent-900/50 dark:text-accent-400">
                       {row.name[lang].charAt(0)}
                     </div>
-                    <span className="text-sm font-medium text-slate-800">{row.name[lang]}</span>
+                    <span className="text-sm font-medium text-slate-800 dark:text-slate-200">{row.name[lang]}</span>
                   </div>
                 </td>
                 <td className="px-5 py-3.5 sm:px-6">
                   <StatusBadge status={row.status} />
                 </td>
-                <td className="px-5 py-3.5 sm:px-6 text-sm text-slate-500">
+                <td className="px-5 py-3.5 sm:px-6 text-sm text-slate-500 dark:text-slate-400">
                   {dateFormatter.format(new Date(row.date))}
                 </td>
-                <td className="px-5 py-3.5 sm:px-6 text-sm font-semibold text-slate-800">
+                <td className="px-5 py-3.5 sm:px-6 text-sm font-semibold text-slate-800 dark:text-slate-200">
                   {currencyFormatter.format(row.amount)}
                 </td>
               </tr>
@@ -154,7 +154,7 @@ export default function DataTable() {
       </div>
 
       {filtered.length > 0 && (
-        <div className="border-t border-slate-100 px-5 py-3.5 sm:px-6 text-xs text-slate-400">
+        <div className="border-t border-slate-100 px-5 py-3.5 sm:px-6 text-xs text-slate-400 dark:border-slate-800">
           {t('dashboard.table.showing', { count: filtered.length, total: orders.length })}
         </div>
       )}

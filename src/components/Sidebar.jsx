@@ -24,7 +24,7 @@ export default function Sidebar({ mobileOpen, onClose }) {
       )}
 
       <aside
-        className={`fixed inset-y-0 start-0 z-50 flex w-64 shrink-0 flex-col border-e border-slate-200 bg-white transition-transform duration-200 ease-out lg:static lg:translate-x-0
+        className={`fixed inset-y-0 start-0 z-50 flex w-64 shrink-0 flex-col border-e border-slate-200 bg-white transition-transform duration-200 ease-out lg:static lg:translate-x-0 dark:border-slate-800 dark:bg-slate-900
         ${mobileOpen ? 'translate-x-0' : 'max-lg:-translate-x-full max-lg:rtl:translate-x-full'}`}
       >
         <div className="flex h-16 shrink-0 items-center justify-between px-5">
@@ -32,9 +32,9 @@ export default function Sidebar({ mobileOpen, onClose }) {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent-600 text-white">
               <Hexagon className="h-[18px] w-[18px]" fill="currentColor" fillOpacity={0.15} />
             </div>
-            <span className="text-lg font-semibold text-slate-900">{t('app.name')}</span>
+            <span className="text-lg font-semibold text-slate-900 dark:text-white">{t('app.name')}</span>
           </div>
-          <button onClick={onClose} className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 lg:hidden">
+          <button onClick={onClose} className="rounded-lg p-1.5 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 lg:hidden">
             <X className="h-5 w-5" />
           </button>
         </div>
@@ -48,8 +48,8 @@ export default function Sidebar({ mobileOpen, onClose }) {
               className={({ isActive }) =>
                 `flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
                   isActive
-                    ? 'bg-accent-50 text-accent-700'
-                    : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                    ? 'bg-accent-50 text-accent-700 dark:bg-accent-900/40 dark:text-accent-400'
+                    : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white'
                 }`
               }
             >
@@ -59,10 +59,10 @@ export default function Sidebar({ mobileOpen, onClose }) {
           ))}
         </nav>
 
-        <div className="border-t border-slate-100 p-3">
+        <div className="border-t border-slate-100 p-3 dark:border-slate-800">
           <button
             onClick={logout}
-            className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-600 transition-colors hover:bg-rose-50 hover:text-rose-600"
+            className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-600 transition-colors hover:bg-rose-50 hover:text-rose-600 dark:text-slate-400 dark:hover:bg-rose-950/40 dark:hover:text-rose-400"
           >
             <LogOut className="h-[18px] w-[18px]" />
             {t('nav.logout')}
